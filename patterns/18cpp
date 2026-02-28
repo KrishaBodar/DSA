@@ -1,0 +1,38 @@
+/*
+Output:
+E
+DE
+CDE
+BCDE
+ABCDE
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+// Function to print reverse starting alphabet triangle
+void printReverseStartAlphabetTriangle(int n){
+
+    for(int i = 0; i < n; i++){                    // loop for rows
+        
+        char start = 'A' + n - i - 1;              // starting character
+        
+        for(char ch = start; ch <= 'A' + n - 1; ch++){   // loop for columns
+            cout << ch;
+        }
+        
+        cout << endl;
+    }
+}
+
+int main(){
+
+    int n;
+    cout << "Enter number of rows: ";
+    cin >> n;
+
+    // Function call
+    printReverseStartAlphabetTriangle(n);
+
+    return 0;
+}
